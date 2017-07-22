@@ -1,0 +1,18 @@
+---
+title: "NLH_NDVI"
+author: "Yunlong Yao"
+date: "7/22/2017"
+output: html_document
+---
+# this script is to analyze the data of NDVI and climate change indices,27 indices.
+
+```{r}
+# load library
+
+# load the data
+nlh <- read.csv("NLH_CCNDVI\\data\\nlh.csv", header = TRUE)
+str(nlh)
+```
+
+
+
