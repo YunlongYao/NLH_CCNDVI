@@ -2,20 +2,34 @@
 title: "NLH_NDVI"
 author: "Yunlong Yao"
 date: "7/22/2017"
-output: html_document
+output: 
+  html_document: 
+    highlight: tango
 ---
 # this script is to analyze the data of NDVI and climate change indices,27 indices.
 
 ```{r}
 # load library
-
+library(ggplot2)
+library(dplyr)
+library(reshape2)
 # load the data
-nlh <- read.csv("NLH_CCNDVI\\data\\nlh.csv", header = TRUE)
+setwd("/Users/yaoyunlong/NLHNDVI/")
+nlh <- read.csv("./data/nlh.csv", header = TRUE)
 str(nlh)
 head(nlh)
 tail(nlh)
-pairs(nlh)
+names(nlh)[1] <- "Station"
+
 ```
 
+### do the correlation ananlys
+
+```{r}
+# clean the data fist
+nlh.long <- melt(nlh, id.vars = c("Station","Value","Year","NDVI_mean"))
+nlh.bq <- nlh.long %>% filter(Station == "50788")
+
+```
 
 
