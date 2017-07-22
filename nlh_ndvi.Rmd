@@ -14,6 +14,7 @@ nlh <- read.csv("NLH_CCNDVI\\data\\nlh.csv", header = TRUE)
 str(nlh)
 head(nlh)
 tail(nlh)
+pairs(nlh)
 ```
 
 
