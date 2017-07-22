@@ -12,6 +12,8 @@ output: html_document
 # load the data
 nlh <- read.csv("NLH_CCNDVI\\data\\nlh.csv", header = TRUE)
 str(nlh)
+head(nlh)
+tail(nlh)
 ```
 
 
